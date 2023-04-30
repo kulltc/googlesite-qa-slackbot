@@ -1,0 +1,26 @@
+# Ignore .chroma directory
+.chroma/
+
+# Ignore __pycache__ directory
+__pycache__/
+
+# Ignore db directory
+data/db/*
+data/site_contents/*
+
+# But don't ignore the .gitkeep files
+!data/db/.gitkeep
+!data/site_contents/.gitkeep
+
+# Ignore any other unwanted files or directories
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Ignore log files
+*.log
+
+# Ignore config files
+*.ini
