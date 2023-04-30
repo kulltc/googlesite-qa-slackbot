@@ -1,0 +1,12 @@
+[openai]
+api_key = sk-....
+
+[DEFAULT]
+url = https://sites.google.com/org/site
+css_selector = div[role="main"]
+cookie_string = login to google site in chrome. Login, Go to dev tools. find the http request, copy the cookies text and paste those here. 
+wait_seconds = 5
+
+[slack]
+app_token = xapp-.........
+bot_token = xoxb-.....
