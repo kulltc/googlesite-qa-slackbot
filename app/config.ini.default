@@ -10,3 +10,9 @@ wait_seconds = 5
 [slack]
 app_token = xapp-.........
 bot_token = xoxb-.....
+
+[rabbitmq]
+host = localhost
+queue = slack_messages
+user = guest
+password = guest
