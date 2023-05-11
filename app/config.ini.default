@@ -6,10 +6,13 @@ url = https://sites.google.com/org/site
 css_selector = div[role="main"]
 cookie_string = login to google site in chrome. Login, Go to dev tools. find the http request, copy the cookies text and paste those here. 
 wait_seconds = 5
+fallback_response = I searched high and low, but my quest for it remains a no-go.
+no_answer_instruction = "If you cannot answer the question based on the information provided, tell the user: I searched high and low, but my quest for it remains a no-go.
 
 [slack]
 app_token = xapp-.........
 bot_token = xoxb-.....
+allowed_channels = channel_id_1,channel_id_2
 
 [rabbitmq]
 host = localhost

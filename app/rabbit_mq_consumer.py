@@ -2,27 +2,28 @@
 import os
 import json
 import pika
-import configparser
+from set_env import set_env
+set_env()
 
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
-from query_ai.langchain_loader import setup_loader_and_index
+from query_ai.langchain_loader import load
 from slackbot.response_formatter import format_query_response_with_sources
-from set_env import set_env
 
-set_env()
 
-index = setup_loader_and_index()
+
+
+chain = load()
 client = WebClient(token=os.environ["SLACK_BOT_TOKEN"])
 
 def handle_message(channel, method, properties, body):
     event = json.loads(body)
 
     query = event["text"]
-    response = index.query_with_sources(query)
-    formatted_response = format_query_response_with_sources(response)
-
+    response = chain(query)
+    formatted_response = format_query_response_with_sources(response, os.environ['FALLBACK_RESPONSE'])
+    
     try:
         client.chat_postMessage(channel=event["channel"], text=formatted_response)
     except SlackApiError as e:
