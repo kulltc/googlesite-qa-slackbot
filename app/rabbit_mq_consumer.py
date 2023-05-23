@@ -2,14 +2,12 @@
 import os
 import json
 import pika
-from set_env import set_env
-set_env()
 
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
-from query_ai.langchain_loader import load
-from slackbot.response_formatter import format_query_response_with_sources
+from .query_ai.langchain_loader import load
+from .slackbot.response_formatter import format_query_response_with_sources
 
 
 
@@ -47,3 +45,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+    

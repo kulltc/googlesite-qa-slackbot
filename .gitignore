@@ -24,3 +24,6 @@ build/
 
 # Ignore config files
 *.ini
+
+# Ignore evals
+eval.jsonl

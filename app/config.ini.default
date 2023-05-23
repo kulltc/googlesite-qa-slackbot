@@ -19,3 +19,6 @@ host = localhost
 queue = slack_messages
 user = guest
 password = guest
+
+[chromadb]
+collection_name=google_site_contents

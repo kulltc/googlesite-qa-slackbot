@@ -1,0 +1,2 @@
+slackbot_completion_fn:
+    class: openair_slack.slackbot_completion_fn:SlackbotCompletionFunction

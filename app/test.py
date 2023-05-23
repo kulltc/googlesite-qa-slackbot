@@ -1,10 +1,7 @@
 
-from slackbot.response_formatter import format_query_response_with_sources
 import os
-from set_env import set_env
-set_env()
-from query_ai.langchain_loader import load
-
+from .slackbot.response_formatter import format_query_response_with_sources
+from .query_ai.langchain_loader import load
 
 chain = load()
 chain.return_source_documents = True

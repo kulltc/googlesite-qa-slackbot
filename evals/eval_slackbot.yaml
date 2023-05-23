@@ -1,0 +1,6 @@
+eval_slackbot:
+  id: eval_slackbot.dev.v0
+eval_slackbot.dev.v0:
+  class: evals.elsuite.basic.match:Match
+  args:
+    samples_jsonl: C:\Users\sven.witteveen\Documents\projects\openair_slack\eval.jsonl

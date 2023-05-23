@@ -1,7 +1,4 @@
-from slackbot.slack_app import SlackBot
-from set_env import set_env
-
-set_env()
+from .slackbot.slack_app import SlackBot
 
 def main():
     slackbot = SlackBot()
