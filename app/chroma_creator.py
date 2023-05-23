@@ -1,6 +1,6 @@
 
 from .slackbot.response_formatter import format_query_response_with_sources
-from query_ai.langchain_loader import create_chroma_db, load
+from .query_ai.langchain_loader import create_chroma_db, load
 
 chroma = create_chroma_db()
 print('chromadb created')
